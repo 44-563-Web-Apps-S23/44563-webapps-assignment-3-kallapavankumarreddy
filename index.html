@@ -59,5 +59,14 @@
         <td>3</td>
     </tr>
 </table>
+<hr>
+<h5>Code</h5>
+<blockquote>Forcing SSL and WWW using .htaccess</blockquote>
+<a href="https://stackoverflow.com/questions/24711083/forcing-ssl-and-www-using-htaccesscr"></a>
+<pre>
+    RewriteEngine on
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+</pre>
 </body>
 </html>
